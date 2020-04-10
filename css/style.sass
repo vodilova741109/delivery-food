@@ -1,0 +1,340 @@
+*
+ box-sizing: border-box
+
+body
+ font-family: "Roboto", sans-serif 
+ padding-top: 44px
+ 
+ 
+
+.container 
+  max-width: 1200px 
+  margin: auto  
+ 
+
+
+.header
+ display: flex
+ align-items: center 
+ justify-content: space-between 
+ margin-bottom: 40px
+
+.input
+ background: #FFFFFF
+ border: 1px solid #D9D9D9
+ box-sizing: border-box
+ font-style: 16px
+ line-height: 24px
+ padding: 8px
+ padding-left: 35px
+ background-repeat: no-repeat
+ background-position: left 11px center
+ border-radius: 2px
+ &-adress  
+  flex: 0.8 //ширина блока 80%
+  background-image: url(../img/home.svg)  
+ &-search  
+  width: 306px 
+  background-image: url(../img/search.svg)
+  margin-left: auto
+
+
+.buttons
+ display: flex
+ align-items: center
+.button
+ display: flex
+ align-items: center
+ padding: 8px 16px
+ background: #FFFFFF
+ border: 1px solid #D9D9D9
+ box-sizing: border-box
+ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015)
+ border-radius: 2px
+ color: #595959 
+ font-size: 16px
+ line-height: 24px
+
+.button-primary
+ background: #1890FF
+ border: 1px solid #1890FF
+ color: #fff
+ margin-right: 9px
+
+.button-icon
+ margin-right: 6px
+.button
+  &-card-text
+    margin-right: 10px 
+
+.main
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%) 
+.promo 
+ box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1)
+ background: #FFF1B8 url(../img/promo-img.jpeg) no-repeat top -150px right -150px/920px
+ border-radius: 10px
+ padding: 68px 70px
+ margin-bottom: 56px
+ 
+ &-title
+  font-style: normal
+  font-weight: bold
+  font-size: 39px
+  line-height: 46px
+  color: #302C34
+ &-text 
+  font-style: normal
+  font-weight: normal
+  font-size: 24px
+  line-height: 28px
+  color: #302C34
+
+.section-heading
+  display: flex
+  align-items: center  
+  margin-bottom: 44px
+
+.section-title
+  font-style: normal
+  font-weight: bold
+  font-size: 36px
+  line-height: 42px
+  color: #000000 
+  margin: 0
+  margin-right: 30px
+
+.cards
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  margin-top: 38px
+.card
+  background: #FFFFFF
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+  border-radius: 7px
+  overflow: hidden //скрывает все что вываливается за блок
+  margin-bottom: 30px
+  flex-basis: 31% //задает блоку 30% ширины от родительского
+  text-decoration: none
+  &-img
+    width: 384px
+    height: 250px
+    object-fit: cover // если картинка не такого размера как надо
+  &-text
+    padding: 20px 23px 35px 23px
+  &-heading
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-title
+    margin: 0
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    color: #000000
+    &-reg
+      font-weight: 400         
+  &-tag
+    font-size: 12px
+    line-height: 20px
+    color: #FFFFFF 
+    background: #262626
+    border-radius: 2px
+    padding: 1px 8px
+  &-info
+    display: flex  
+    align-items: center
+    flex-wrap: wrap //если задать блоку display: block, то можно убрать 
+ 
+  &-buttons
+    display: flex     
+    align-items: center
+    margin-top: 24px
+
+  &-price-bold
+   font-weight: bold
+   font-size: 20px
+   line-height: 32px  
+   margin-left: 32px 
+
+.rating
+  margin-right: 26px
+  color: #FFC107
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 32px
+  &-star
+    margin-right: 4px
+
+.price, .category
+  color: #8C8C8C
+  font-size: 18px
+  line-height: 32px
+.price
+  margin-right: 10px  
+  &:after
+    content: ""
+    width: 5px
+    height: 5px
+    background-color: #8C8C8C
+    display: inline-block
+    border-radius: 50%
+    vertical-align: middle
+    margin-left: 10px
+.category  //работает все вместе
+  text-overflow: ellipsis //обрезает лишний текс и ставит три точки  
+  overflow: hidden //скрывает все что вываливается за блок
+  white-space: nowrap //запрещает перенос строки
+  max-width: 100px
+.ingredients  
+  color: #8C8C8C
+  font-size: 18px
+  line-height: 21px
+  padding-top: 10px
+
+.footer
+  padding: 60px 0
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between  
+  &-nav
+    margin-left: 35px
+    margin-right: auto   //скорректировать отступы Jc sp-between
+  &-link
+    display: inline-block
+    color: #595959
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    text-decoration: none
+  &-link:not(:last-child) //для всех элементов кроме последнего(можно выбрать другой вариант)
+    margin-right: 15px
+.social
+  &-links
+    display: flex
+    align-items: center  
+  &-link:not(:last-child)    
+    margin-right: 21px
+
+    // модально окно
+.modal  
+  position: fixed // не прокручивается
+  left: 0 // крепится к левому верхнему углу
+  top: 0
+  width: 100%    // растягивается на 100%  
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  display: flex
+  display: none  
+  &-dialog        
+    max-width: 780px
+    width: 95%   
+    margin: auto //блок будет всегда в середине родителя
+    background: #FFFFFF
+    border-radius: 5px
+    padding: 40px 45px
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between 
+    margin-bottom: 45px           
+  &-title
+    margin: 0
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 42px
+.close
+  font-size: 36px
+  border: none  
+  background-color: transparent // цвет прозрачный
+.is-open
+  display: flex
+
+.food
+  &-row 
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-bottom: 10px
+    border-bottom:  1px solid #d9d9d9
+    padding-bottom: 15px
+  &-name
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px  
+  &-price
+    margin-left: auto
+    margin-right: 47px
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 32px
+  &-counter
+    display: flex  
+    align-items: center
+.counter
+  margin: 0 13px
+  font-size: 16px
+  line-height: 24px
+  &-button
+    background: #FFFFFF
+    border: 1px solid #40A9FF
+    box-sizing: border-box
+    border-radius: 2px    
+    width: 39px
+    height: 32px 
+    font-size: 14px
+    line-height: 22px
+    color: #40A9FF
+
+.modal  
+  &-body
+    margin-bottom: 52px
+  &-footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-pricetage
+    background: #262626
+    border-radius: 5px   
+    color:#fff  
+    padding: 15px 20px
+    font-size: 20px
+    line-height: 23px
+  
+   
+.footer
+  &-buttons
+    display: flex
+    align-items: center
+    // justify-content: space-between    
+  
+
+
+
+
+
+
+@import 'media'
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+ 

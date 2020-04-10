@@ -1,0 +1,116 @@
+@media  ( max-width: 1366px )
+ .container
+  max-width: 960px
+ .promo
+  background-size: 750px
+  background-position: center right -300px
+ // .rating 
+ //  margin-right: 15px  
+ .category, .price
+  font-size: 14px
+
+
+@media  ( max-width: 992px )
+ .container
+  max-width: 750px   
+ .promo
+  padding: 50px
+  background-size: 500px
+  background-position: center right -200px
+  &-text
+   font-size: 18px
+   max-width: 400px
+ .card
+  flex-basis: 49%  
+  height: auto 
+  &-info 
+   display: flex
+
+@media  ( max-width: 768px )
+ .container
+  max-width: 560px    
+ .card
+  &-info
+   flex-wrap: wrap
+  &-title
+   font-size: 18px 
+ .card .rating //работает только в card
+  flex-basis: 100%  
+ .promo
+  background-size: 400px
+  background-position: bottom 50px right -200px
+  &-title 
+   font-size: 24px
+   line-height: 1.4
+  &-text
+   margin-top: 0 
+@media  ( max-width: 578px )
+ .container
+  width: 90%  
+ .header
+  flex-wrap: wrap  
+ .input-adress
+  margin-top: 15px
+  order: 5 // 5 элемент по счету в ряду
+  flex: 1  // на всю ширину 
+ .promo  
+  background-image: none
+  &-title
+   margin-bottom: 10px
+ .section-title
+  font-size: 20px
+ .card
+  flex-basis: 100%
+  &-img
+   width: 100%
+ .footer
+  padding: 30px 0
+  &-block
+   align-items: flex-start
+  &-nav
+   order: 0
+   margin-right: 0
+   margin-left: 0
+   display: flex
+   flex-direction: column
+
+  &-logo
+   order: 1  
+   margin-right: 15px
+ .social-links
+  order: 2  
+@media  ( max-width: 480px )
+ .button
+  min-width: 40px
+  &-icon
+   margin: 0
+  &-text
+   display: none
+ .promo
+  padding: 20px
+ .section-heading
+  flex-wrap: wrap
+ .footer
+  &-block 
+   flex-wrap: wrap 
+   flex-direction: column
+   align-items: center
+  &-link:not(:last-child)
+   margin-right: 0 
+  &-logo
+   order: 0 
+   margin-bottom: 20px
+  &-nav
+   margin-bottom: 20px 
+   text-align: center
+   
+
+
+   
+ 
+
+
+
+
+ 
+ 
